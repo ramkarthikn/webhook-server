@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: webhook-server
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: SHARED_SECRET
+        value: your_shared_secret
