@@ -4,7 +4,7 @@ const crypto = require('crypto');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const SHARED_SECRET = process.env.SHARED_SECRET || 'my_shared_secret';
+const SHARED_SECRET = process.env.SHARED_SECRET || 'password';
 
 app.use(bodyParser.json({
   verify: (req, res, buf) => {
