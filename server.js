@@ -12,7 +12,7 @@ app.use(bodyParser.json({
   }
 }));
 
-app.post('/webhook', (req, res) => {
+/*app.post('/webhook', (req, res) => {
   const signature = req.headers['x-signature'];
   const rawBody = req.rawBody;
 
@@ -26,6 +26,13 @@ app.post('/webhook', (req, res) => {
   }
 
   console.log('✅ Webhook received and verified!');
+  console.log(req.body);
+
+  res.status(200).send('OK');
+}); */
+
+app.post('/webhook', (req, res) => {
+  console.log('✅ Webhook received (verified by Apigee)');
   console.log(req.body);
 
   res.status(200).send('OK');
